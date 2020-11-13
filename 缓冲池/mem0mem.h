@@ -36,8 +36,7 @@ page buffer pool; the latter method is used for very big heaps */
 
 #define MEM_HEAP_DYNAMIC	0	/* the most common type */
 #define MEM_HEAP_BUFFER		1
-#define MEM_HEAP_BTR_SEARCH	2	/* this flag can be ORed to the
-					previous */
+#define MEM_HEAP_BTR_SEARCH	2	/* this flag can be ORed to the previous */
 
 /* The following start size is used for the first block in the memory heap if
 the size is not specified, i.e., 0 is given as the parameter in the call of

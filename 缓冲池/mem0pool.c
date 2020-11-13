@@ -17,7 +17,7 @@ Created 5/12/1997 Heikki Tuuri
 #include "ut0byte.h"
 
 /* We would like to use also the buffer frames to allocate memory. This
-would be desirable, because then the memory consumption of the database
+would be desirable 合适的,  because then the memory consumption 消费 of the database
 would be fixed, and we might even lock the buffer pool to the main memory.
 The problem here is that the buffer management routines can themselves call
 memory allocation, while the buffer pool mutex is reserved.
@@ -34,7 +34,7 @@ The main components of the memory consumption are:
 8. session for each user, and
 9. stack for each OS thread.
 
-Items 1-3 are managed by an LRU algorithm. Items 5 and 6 can potentially
+Items 1-3 are managed by an LRU algorithm. Items 5 and 6 can potentially 潜在的
 consume very much memory. Items 7 and 8 should consume quite little memory,
 and the OS should take care of item 9, which too should consume little memory.
 

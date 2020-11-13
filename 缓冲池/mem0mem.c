@@ -23,8 +23,8 @@ Created 6/9/1994 Heikki Tuuri
 			=====================
 
 The basic element of the memory management is called a memory
-heap. A memory heap is conceptually a
-stack from which memory can be allocated. The stack may grow infinitely.
+heap. A memory heap is conceptually(概念上) a
+stack from which memory can be allocated. The stack may grow infinitely（无限的）.
 The top element of the stack may be freed, or
 the whole stack can be freed at one time. The advantage of the
 memory heap concept is that we can avoid using the malloc and free
@@ -32,8 +32,8 @@ functions of C which are quite expensive, for example, on the Solaris + GCC
 system (50 MHz Sparc, 1993) the pair takes 3 microseconds,
 on Win NT + 100MHz Pentium, 2.5 microseconds.
 When we use a memory heap,
-we can allocate larger blocks of memory at a time and thus
-reduce overhead. Slightly more efficient the method is when we
+we can allocate larger blocks of memory at a time and thus 从而 reduce 减少 overhead 开销. 
+Slightly more efficient the method is when we
 allocate the memory from the index page buffer pool, as we can
 claim a new page fast. This is called buffer allocation. 
 When we allocate the memory from the dynamic memory of the
@@ -45,7 +45,7 @@ allocated. In dynamic allocation this may be about 50 bytes.
 If more space is needed, additional blocks are allocated
 and they are put into a linked list.
 After the initial block, each allocated block is twice the size of the 
-previous, until a threshold is attained, after which the sizes
+previous, until a threshold 阀值 is attained 达到, after which the sizes
 of the blocks stay the same. An exception is, of course, the case
 where the caller requests a memory buffer whose size is
 bigger than the threshold. In that case a block big enough must
